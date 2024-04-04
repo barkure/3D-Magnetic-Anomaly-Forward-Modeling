@@ -24,7 +24,7 @@ H_a = (mu_0 * m_s) / (2 * np.pi * (X**2 + R**2)**2) * ((R**2 - X**2) * np.cos(i_
 Delta_T = (mu_0 * m_s) / (2 * np.pi * (X**2 + R**2)**2) * (np.sin(I) / np.sin(i_s)) * ((R**2 - X**2) * np.sin(2 * i_s - np.pi/2) - 2 * R * X * np.cos(2 * i_s - np.pi/2))
 
 # 绘制图形
-fig, ax = plt.subplots(figsize=(10, 10))
+fig, ax = plt.subplots(figsize=(20, 10))
 ax.plot(X, Z_a, label=r'$Z_a$')
 ax.plot(X, H_a, label=r'$H_a$')
 ax.plot(X, Delta_T, label=r'$\Delta T$')
