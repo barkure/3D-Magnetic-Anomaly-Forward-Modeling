@@ -80,14 +80,17 @@ def update(i):
 # 创建动画
 ani = FuncAnimation(fig, update, frames=range(0, 91), interval=50)
 print('正在生成动画，请稍等...')
-ani.save('sphere.gif', writer='pillow')
+# 保存GIF
+if not os.path.exists('images'):
+    os.makedirs('images')
+ani.save('images/sphere.gif', writer='pillow')
 
 # 播放GIF
 print('正在播放动画...')
 # 获取当前工作目录
 cwd = os.getcwd()
 # GIF的文件名
-gif_filename = "sphere.gif"
+gif_filename = "images/sphere.gif"
 # 创建GIF的完整路径
 gif_path = os.path.join(cwd, gif_filename)
 # 在默认的web浏览器中打开GIF

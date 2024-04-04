@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']  # 设置字体为微软雅黑
 plt.rcParams['axes.unicode_minus'] = False
@@ -35,7 +36,9 @@ ax.set_ylabel('Value')
 ax.legend()
 
 # 保存图像
-plt.savefig(f'horizontal_cylinder_{i_s/np.pi*180}°.png')
+if not os.path.exists('images'):
+    os.makedirs('images')
+plt.savefig(f'images/horizontal_cylinder_{i_s/np.pi*180}°.png')
 
 plt.show()
 
