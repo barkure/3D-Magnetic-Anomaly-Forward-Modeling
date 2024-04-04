@@ -10,7 +10,7 @@ v = 1000   # 体积
 M = 45000 # 磁化强度
 m_s = M*v # 磁矩
 R = 1000 # 埋深
-i_s = np.deg2rad(0) # 有效磁化倾角
+i_s = np.deg2rad(90) # 有效磁化倾角
 I = np.deg2rad(90)  # 磁化倾角
 
 X = np.linspace(-2000, 2000, 101)
@@ -29,7 +29,7 @@ ax.plot(X, H_a, label=r'$H_a$')
 ax.plot(X, Delta_T, label=r'$\Delta T$')
 ax.axhline(0, color='red', linestyle='--')
 ax.set_title('水平圆柱体磁异常正演模拟', fontsize=20)
-fig.text(0.8, 0.9, f'磁化倾角：{i_s/np.pi*180}°', fontsize=13)
+fig.text(0.8, 0.9, f'有效磁化倾角：{i_s/np.pi*180}°', fontsize=13)
 ax.set_xlabel('X')
 ax.set_ylabel('Value')
 ax.legend()
