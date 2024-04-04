@@ -17,7 +17,7 @@ R = 1000 # 埋深
 X, Y = np.meshgrid(np.linspace(-R, R, 51), np.linspace(-R, R, 51))
 
 fig = plt.figure(figsize=(10, 10))
-fig.suptitle('球体磁异常正演模拟', fontsize=20)
+fig.suptitle('球形磁体正演模拟', fontsize=20)
 ax1 = fig.add_subplot(221, projection='3d')
 ax2 = fig.add_subplot(222, projection='3d')
 ax3 = fig.add_subplot(223, projection='3d')
