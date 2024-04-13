@@ -30,10 +30,10 @@ def update(i):
 
     # 计算H_ax, H_ay, Z_a, Delta_T
     H_ax = (mu_0 / (4*np.pi)) * (m / (X**2 + Y**2 + R**2)**(5/2)) * \
-    ((2*X**2 - Y**2 - R**2) * np.cos(I) * np.cos(A_prime) - 3*R*X * np.sin(I) + 3*X*Y * np.cos(A_prime) * np.sin(I))
+    ((2*X**2 - Y**2 - R**2) * np.cos(I) * np.cos(A_prime) - 3*R*X * np.sin(I) + 3*X*Y * np.cos(I) * np.sin(A_prime))
 
     H_ay = (mu_0 / (4*np.pi)) * (m / (X**2 + Y**2 + R**2)**(5/2)) * \
-        ((2*Y**2 - X**2 - R**2) * np.cos(I) * np.cos(A_prime) - 3*R*Y * np.sin(I) + 3*X*Y * np.cos(A_prime) * np.sin(I))
+        ((2*Y**2 - X**2 - R**2) * np.cos(I) * np.cos(A_prime) - 3*R*Y * np.sin(I) + 3*X*Y * np.cos(I) * np.sin(A_prime))
 
     Z_a = (mu_0 / (4*np.pi)) * (m / (X**2 + Y**2 + R**2)**(5/2)) * \
         ((2*R**2 - X**2 - Y**2) * np.sin(I) - 3*R*X * np.cos(I) * np.cos(A_prime) - 3*R*Y * np.cos(I) * np.sin(A_prime))
